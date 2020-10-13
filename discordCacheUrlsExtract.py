@@ -17,9 +17,9 @@ def readFile(file):
     :return: Url extracted
     '''
     with open(file, 'r', encoding='ascii', errors='ignore') as f:
-        strings = f.readlines()
+        fileStrings = f.readlines()
         regex = 'https://.*(png|jpg)'
-        for line in strings:
+        for line in fileStrings:
             result = re.search(regex, line)
             if result:
                 return(result.group()) # return url
