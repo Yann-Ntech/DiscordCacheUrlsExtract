@@ -1,4 +1,4 @@
-__name__ = 'Url_to_jpg'
+__name__ = 'DiscordCacheUrlsExtract'
 __author__ = 'Yann-NTECH'
 __version__ = 0.1
 __date__ = '12-10-2020'
