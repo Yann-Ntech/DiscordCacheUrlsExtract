@@ -17,12 +17,12 @@ def readFile(file):
     :return: Url extracted
     '''
     with open(file, 'r', encoding='ascii', errors='ignore') as f:
-        mystring = f.readlines()
+        strings = f.readlines()
         regex = 'https://.*(png|jpg)'
-        for line in mystring:
-            res = re.search(regex, line)
-            if res:
-                return(res.group())
+        for line in strings:
+            result = re.search(regex, line)
+            if result:
+                return(result.group()) # return url
 
 
 DIRECTORY = '.\\files'
