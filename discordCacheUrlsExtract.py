@@ -29,10 +29,10 @@ DIRECTORY = '.\\files'
 urlsList = []
 
 for file in os.listdir(DIRECTORY):
-    analyse = os.path.join(DIRECTORY, file)
-    url = readFile(analyse)
+    pathFile = os.path.join(DIRECTORY, file)
+    url = readFile(pathFile)
     if url is not None:
-        urlsList.append(readFile(analyse))
+        urlsList.append(url)
 
 with open('urls.csv', 'w') as f:
     writer = csv.writer(f, delimiter="\n")
