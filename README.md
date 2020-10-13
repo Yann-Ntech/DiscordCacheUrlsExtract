@@ -3,5 +3,5 @@ Script to extract urls from files found in \Users\$User\Library\Application Supp
 
 ## Config & run
 
-insert discord cache files in \files directory.
-Run script to obtain urls.csv
+- Insert discord cache files in \files directory.
+- Run script to obtain urls.csv
