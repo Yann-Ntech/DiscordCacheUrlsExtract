@@ -10,3 +10,9 @@ made to use personally on linux with linking it my own tools by using os.system(
 sudo python3 urlext.py
 
 use at own risk
+
+#Why this and not a file converter?
+
+Discord has lots of malware exploits designed for the discord cache
+
+Storing the images as a link is safer than converting them
