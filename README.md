@@ -11,7 +11,7 @@ sudo python3 urlext.py
 
 use at own risk
 
-#Why this and not a file converter?
+# Why this and not a file converter?
 
 Discord has lots of malware exploits designed for the discord cache
 
