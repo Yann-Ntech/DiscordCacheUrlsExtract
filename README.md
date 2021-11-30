@@ -16,4 +16,5 @@ use at own risk
 Discord has lots of malware exploits designed for the discord cache
 
 Storing the images as a link is safer than converting them
+
 But you can do this by editing https://github.com/beans816/request-bash
