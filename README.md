@@ -10,8 +10,3 @@ made to use personally on linux with linking it my own tools by using os.system(
 sudo python3 urlext.py
 
 use at own risk
-
-## Config & run
-
-- Insert discord cache files in \files directory.
-- Run script to obtain urls.csv
