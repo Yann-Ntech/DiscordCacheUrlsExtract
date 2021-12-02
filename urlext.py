@@ -1,25 +1,25 @@
 import re, os, csv
 
+#custom imports
+from bashOS import *
+
 def readFile(file):
 
     with open(file, 'r', encoding='ascii', errors='ignore') as f:
         fileStrings = f.readlines()
-        regex = 'https://.*(png|jpg|mp4)'
+        regex = 'https://media.discordapp.net/attachments/*.*(png|jpg|mp4|mov)' #this is usually the filter people want when looking in their cache
+        #filters to only attachments/ examples of other filters you can use:
+        #general filter: https://*.*(png|jpg|mp4|mov)
+        #emojis: https://cdn.discordapp.com/emojis/*.*(png|jpg) 
+        #stickers: https://media.discordapp.net/stickers/*.*(png|jpg) 
+        #external attachments hosted on different sites: https://images-ext*.*(png|jpg|mp4|mov)
         for line in fileStrings:
             result = re.search(regex, line)
             if result:
                 return(result.group()) # return url
 
 
-d_fcache = '/home/be/Desktop/fakeCache'
-d_cache = '/home/be/.config/discord/Cache'
-
-urlsList = []
-
-# 1.move files from real sicord cache into fake cache to avoid 'cant read IsaDirectoryError'
-#find /home/be/.config/discord/Cache -type f
-commandCache = "sudo find " + d_cache + " -type f -exec mv -t " + d_fcache + "/ {} \; && sudo chmod 777 -R " + d_fcache #command to be executed bash
-res = os.system(commandCache) # runs above command
+res = os.system(Cache) # runs cache command to move files from the discord cache into the fake cache
 
 for file in os.listdir(d_fcache):
     pathFile = os.path.join(d_fcache, file)
@@ -32,8 +32,5 @@ with open('urls.csv', 'w') as f:
     writer = csv.writer(f, delimiter="\n")
     writer.writerow(urlsList)
 
-#moves contents of fakeCache into shredder and shreds using killerbean
-#wont work unless you have set killerbean to shred the diectory /shred otherwise you might mistakenly destroy your /boot file o-o
-#uncomment to use but at your own risk
-#commandShred = "sudo find " + d_fcache + " -type f -exec mv -t /home/be/Desktop/shred/ {} \; && sudo ./killerbean" #shreds cache
-#res = os.system(commandShred) # runs above command
+
+#res = os.system(Shred) # runs shred command that safely deletes all the files in the fake cache
