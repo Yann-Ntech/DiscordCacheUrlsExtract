@@ -1,6 +1,6 @@
 #Directorys
 d_fcache = '~/Desktop/fakeCache'
-d_cache = '/home/be/.config/discord/Cache'
+d_cache = '~/.config/discord/Cache'
 urlsList = []
 
 
