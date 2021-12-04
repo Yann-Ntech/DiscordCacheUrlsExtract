@@ -15,8 +15,9 @@ Bash in bashOS.py:
 ![bashsystem](https://user-images.githubusercontent.com/22084147/144713707-d96ef940-fdcf-4288-8527-36f00ef077d9.png)
 
 Bash in extract.py:
+![bashsystem](https://user-images.githubusercontent.com/22084147/144716197-6dcf61a8-2b4a-4c3e-9fae-bc5a5b0be972.png)
 
-![changeusername](https://user-images.githubusercontent.com/22084147/144714904-6e54a3ff-0ee3-480a-b9a1-27dc814d9180.png)
+
 
 # How to use
 ```cd Desktop```
