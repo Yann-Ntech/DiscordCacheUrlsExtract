@@ -14,6 +14,7 @@ Depending on your OS the bash os.system commands might differ and not work, so m
 
 # How to use
 ```cd Desktop```
+
 ```git clone```
 
 Choose what you want to filter your cache to and edit accordingly in urlext.py:
