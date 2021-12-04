@@ -10,8 +10,12 @@ Should work on linux and MacOS -- it most likely will not work on your computer 
 
 If you are on MacOS the bash os.system() commands might differ and not work, so make sure that bashOS.py is compatible with your OS:
 
+Bash in bashOS.py:
+
 ![bashsystem](https://user-images.githubusercontent.com/22084147/144713707-d96ef940-fdcf-4288-8527-36f00ef077d9.png)
 
+Bash in extract.py
+![changeusername](https://user-images.githubusercontent.com/22084147/144714904-6e54a3ff-0ee3-480a-b9a1-27dc814d9180.png)
 
 # How to use
 ```cd Desktop```
@@ -27,7 +31,7 @@ Change ```urmom``` to the username on your computer that you see in your directo
 ![changeusername](https://user-images.githubusercontent.com/22084147/144714607-47f8769d-1620-4c6e-86a4-8ccb4e5d0222.png)
 
 
-```sudo python3 urlext.py```
+```sudo python3 extract.py```
 
 
 
