@@ -36,7 +36,6 @@ if prompt_csv == 'y':
     with open('urls.csv', 'w') as f:
         writer = csv.writer(f, delimiter="\n")
         writer.writerow(urlsList)
-    #images_count = int(input("How many images would you like to download: "))
 else:
     pass
 
