@@ -20,7 +20,7 @@ Choose what you want to filter your cache to and edit accordingly in urlext.py:
 
 ![urlFilter](https://user-images.githubusercontent.com/22084147/144713378-87f6cab5-32e4-4eb4-b14d-c3aa1d47a597.png)
 
-Change urmom to the username on your computer that you see in your directory structure:
+Change ```urmom``` to the username on your computer that you see in your directory structure:
 
 ![changeusername](https://user-images.githubusercontent.com/22084147/144713637-9961a34c-d75c-4361-9db5-dc8c4353ecd2.png)
 
