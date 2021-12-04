@@ -1,11 +1,11 @@
 #enter your $USER name
-usr = 'urmom'
+usr = '/home/urmom'
 
 #Directorys
-d_fcache = '/home/' + usr + '/Desktop/DiscordUncacher/fakeCache'
-d_cache = '/home/' + usr + '/.config/discord/Cache' #discord cache
-d_downlCache = '/home/' + usr + '/Desktop/DiscordUncacher/downlCache'
-d_UrlsExtract = '/home/' + usr + '/Desktop/DiscordUncacher'
+d_fcache = usr + '/Desktop/UrlsExtract/fakeCache'
+d_cache = usr + '/.config/discord/Cache' #discord cache
+d_downlCache = usr + '/Desktop/UrlsExtract/downlCache'
+d_UrlsExtract = usr + '/Desktop/UrlsExtract'
 urlsList = []
 
 
