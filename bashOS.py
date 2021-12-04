@@ -2,10 +2,10 @@
 usr = 'urmom'
 
 #Directorys
-d_fcache = '/home/' + usr + '/Desktop/UrlsExtract/fakeCache'
+d_fcache = '/home/' + usr + '/Desktop/DiscordUncacher/fakeCache'
 d_cache = '/home/' + usr + '/.config/discord/Cache' #discord cache
-d_downlCache = '/home/' + usr + '/Desktop/UrlsExtract/downlCache'
-d_UrlsExtract = '/home/' + usr + '/Desktop/UrlsExtract'
+d_downlCache = '/home/' + usr + '/Desktop/DiscordUncacher/downlCache'
+d_UrlsExtract = '/home/' + usr + '/Desktop/DiscordUncacher'
 urlsList = []
 
 
