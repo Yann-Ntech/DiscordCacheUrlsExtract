@@ -9,7 +9,7 @@ d_UrlsExtract = usr + '/Desktop/UrlsExtract'
 urlsList = []
 
 
-# moves files from real sicord cache into fake cache to avoid 'cant read IsaDirectoryError'
+# moves files from real dicord cache into fake cache to avoid 'cant read IsaDirectoryError'
 Cache = "sudo find " + d_cache + " -type f -exec mv -t " + d_fcache + "/ {} \; && sudo chmod 777 -R " + d_fcache
 
 
