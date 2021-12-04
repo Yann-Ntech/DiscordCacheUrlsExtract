@@ -1,6 +1,11 @@
+#enter your $USER name
+usr = 'urmom'
+
 #Directorys
-d_fcache = '~/Desktop/fakeCache'
-d_cache = '~/.config/discord/Cache'
+d_fcache = '/home/' + usr + '/Desktop/UrlsExtract/fakeCache'
+d_cache = '/home/' + usr + '/.config/discord/Cache' #discord cache
+d_downlCache = '/home/' + usr + '/Desktop/UrlsExtract/downlCache'
+d_UrlsExtract = '/home/' + usr + '/Desktop/UrlsExtract'
 urlsList = []
 
 
@@ -9,3 +14,4 @@ Cache = "sudo find " + d_cache + " -type f -exec mv -t " + d_fcache + "/ {} \; &
 
 #shreds cache
 Shred = "sudo find " + d_fcache + " -type f -exec mv -t /home/be/Desktop/shred/ {} \; && sudo ./killerbean" 
+
