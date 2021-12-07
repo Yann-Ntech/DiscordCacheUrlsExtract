@@ -52,7 +52,7 @@ if prompt_downl == 'y':
                 newfile = f.write(r.content) #writes url into a new file
                 #Why: files naturally download where the script is
                 #Chmod: recursively gives entire file and its contents read, write and execute permisions for current user
-                Move = "mv "+ d_UrlsExtract + '/' + fileName + " " + d_downlCache + '/' + fileName + " && sudo chmod 777 -R " + d_downlCache
+                Move = "mv "+ d_UrlsExtract + '/' + fileName + " " + d_downlCache + '/' + fileName + " && sudo chmod 666 -R " + d_downlCache
                 res = os.system(Move)
 else:
     pass
