@@ -1,11 +1,12 @@
-#enter your $USER name
-usr = '/home/urmom'
+import getpass
+
+usr = '/home/' + getpass.getuser()
 
 #Directorys
-d_fcache = usr + '/Desktop/UrlsExtract/fakeCache'
+d_fcache = usr + '/Desktop/DiscordUncacher/fakeCache'
 d_cache = usr + '/.config/discord/Cache' #discord cache
-d_downlCache = usr + '/Desktop/UrlsExtract/downlCache'
-d_UrlsExtract = usr + '/Desktop/UrlsExtract'
+d_downlCache = usr + '/Desktop/DiscordUncacher/downlCache'
+d_UrlsExtract = usr + '/Desktop/DiscordUncahcer'
 urlsList = []
 
 
