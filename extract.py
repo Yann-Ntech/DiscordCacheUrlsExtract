@@ -1,43 +1,7 @@
 import re, os, csv, requests
-
-
 #custom imports
 from bashOS import *
-
-def chooseType():
-    #print file filter types:
-    print("FILE TYPES: \n 1] all \n 2] attachments \n 3] external attachments \n 4] emojis \n 5] stickers")
-    #prompt for what filter is wanted
-    prompt_type = input("What kind of files do you want to download? Enter number: ")
-    #error handling
-    global regex
-        #exec get_link()
-        #regex = 'https://media.discordapp.net/attachments/*.*(png|jpg)' #this is usually the filter people want when looking in their cache
-        #filters to only attachments/ examples of other filters you can use:
-        #general filter: https://*.*(png|jpg|mp4|mov)
-        #emojis: https://cdn.discordapp.com/emojis/*.*(png|jpg) 
-        #stickers: https://media.discordapp.net/stickers/*.*(png|jpg) 
-        #external attachments hosted on different sites: https://images-ext*.*(png|jpg|mp4|mov)
-
-    if prompt_type == '1':
-        regex = 'https://*.*(png|jpg|mp4|mov)'
-        print("file type urls: " + regex)
-    elif prompt_type == '2':
-        regex = 'https://media.discordapp.net/attachments/*.*(png|jpg)'
-        print("file type urls: " + regex)
-    else:
-        print("\n")
-        os.system('echo -e "\033[5;41;1;37m   Invalid input, restarting filter process...   \033[0m"')
-        print("\n")
-        #recall function until valid value passed
-        chooseType()
-
-chooseType()
-
-print("regex link: " + regex)
-
-
-print(regex)
+from options import *
 def readFile(file):
 
     with open(file, 'r', encoding='ascii', errors='ignore') as f:
@@ -75,7 +39,7 @@ def chooseCsv():
         #recall function until valid value passed
         chooseCsv()
 
-chooseCsv()
+
 
 def chooseDownl():
     prompt_downl = input("Would you like to download the URLS y/n: ")
@@ -102,4 +66,5 @@ def chooseDownl():
         #recall function until valid value passed
         chooseDownl()
 
+chooseCsv()
 chooseDownl()
