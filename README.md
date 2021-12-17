@@ -24,12 +24,6 @@ Bash in extract.py:
 
 ```git clone https://github.com/beans816/DiscordUncacher```
 
-Choose what you want to filter your cache to and edit accordingly in extract.py:
-
-![urlFilter](https://user-images.githubusercontent.com/22084147/144713378-87f6cab5-32e4-4eb4-b14d-c3aa1d47a597.png)
-
-
-
 ```sudo python3 extract.py```
 
 
