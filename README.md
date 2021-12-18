@@ -6,9 +6,11 @@ Script to extract urls from files found in discord cache and to download the url
 
 ![url](https://user-images.githubusercontent.com/22084147/144713308-1b43ce54-a556-406c-8cac-064d3bada2e7.png)
 
-Should work on linux and MacOS -- it most likely will not work on your computer unless you have a similar filesytem but feel free to edit it as you want. You will see the directory structure in bashOS.py.
+You will see the directory structure in bashOS.py. Check that the directories comply with your file system so you dont get the 'directory does not exist' error.
 
-If you are on MacOS the bash os.system() commands might differ and not work, so make sure that bashOS.py is compatible with your OS:
+# Bash that forces some funtionalities that JUST WORK
+
+> libraries like shutil.move, os.rename and os.replace just never seemed to work! This is my solution using os.system.
 
 Bash in bashOS.py:
 
