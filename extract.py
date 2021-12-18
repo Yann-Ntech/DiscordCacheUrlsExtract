@@ -2,6 +2,7 @@ import re, os, csv, requests
 #custom imports
 from bashOS import *
 from options import *
+
 def readFile(file):
 
     with open(file, 'r', encoding='ascii', errors='ignore') as f:
@@ -12,15 +13,17 @@ def readFile(file):
             if result:
                 return(result.group()) # return url
 
-
-res = os.system(Cache) # runs cache command to move files from the discord cache into the fake cache
-
-#populates array
-for file in os.listdir(d_fcache):
-    pathFile = os.path.join(d_fcache, file)
-    url = readFile(pathFile)
-    if url is not None:
-        urlsList.append(url)
+def populate():
+    res = os.system(Cache) # runs cache command to move files from the discord cache into the fake cache
+    #populates array
+    for file in os.listdir(d_fcache):
+        pathFile = os.path.join(d_fcache, file)
+        url = readFile(pathFile)
+        if url is not None:
+           
+            urlsList.append(url)
+            print(urlsList)
+            return urlsList
 
 def chooseCsv():
     prompt_csv = input("Would you like a list of the URLS y/n: ")
@@ -34,12 +37,10 @@ def chooseCsv():
         pass
     else:
         print("\n")
-        os.system('echo -e "\033[5;41;1;37m   Invalid input, please enter y/n   \033[0m"')
+        os.system('printf "\e[6;33m Please input y/n \e[0m"')
         print("\n")
         #recall function until valid value passed
         chooseCsv()
-
-
 
 def chooseDownl():
     prompt_downl = input("Would you like to download the URLS y/n: ")
@@ -61,10 +62,29 @@ def chooseDownl():
         pass
     else:
         print("\n")
-        os.system('echo -e "\033[5;41;1;37m   Invalid input, please enter y/n    \033[0m"')
+        os.system('printf "\e[6;33m Please input y/n \e[0m"')
         print("\n")
         #recall function until valid value passed
         chooseDownl()
 
-chooseCsv()
-chooseDownl()
+def cacheDel():
+    prompt_del = input("Would you like your cache to be deleted or restored? \n Input 'd' to delete or 'r' to restore: ")
+    if prompt_csv == 'd':
+        #deletes cache
+    elif prompt_csv == 'r':
+        #restores cache
+    else:
+        print("\n")
+        os.system('printf "\e[6;33m Please input d/r \e[0m"')
+        print("\n")
+        #recall function until valid value passed
+        chooseDel()
+
+def WOAH_LOOK_AT_THESE():
+
+    populate()
+    chooseCsv()
+    chooseDownl()
+    chooseDel()
+
+WOAH_LOOK_AT_THESE()
