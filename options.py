@@ -1,4 +1,5 @@
-options = { }
+
+regex_options = { }
 
 class option:
     def __init__(self, description, fun):
@@ -6,15 +7,15 @@ class option:
         self.fun = fun
 
 def newOption(position, description, fun):
-    options[position] = option(description,fun)
+    regex_options[position] = option(description,fun)
 
 def userInput():
     Input = input("Option: ")
-    return options[Input]
+    return regex_options[Input]
 
 def allDescriptions():
-    for k in options:
-        print("Description: " + options[k].description)
+    for k in regex_options:
+        print("Description: " + regex_options[k].description)
 
 def getRegex():
     print("Type 'help' to display descriptions.")
@@ -22,7 +23,7 @@ def getRegex():
         Input = userInput()
         return Input.fun()
     except KeyError:
-        print("Invalid option")
+        print("\e[6;33m Please input y/n \e[0m")
         allDescriptions()
         return getRegex()
 
