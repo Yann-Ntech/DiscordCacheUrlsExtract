@@ -27,7 +27,7 @@ regex_options = { }
 #
 #
 
-#############REGEX FILTERING#############
+#############  REGEX FILTERING  #############
 
 class option:
     def __init__(self, description, fun):
