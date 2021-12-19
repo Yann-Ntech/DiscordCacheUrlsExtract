@@ -94,7 +94,17 @@ Cache = "sudo find " + d_cache + " -type f -exec mv -t " + d_fcache + "/ {} \; &
 Move = "mv "+ d_UrlsExtract + '/' + fileName + " " + d_downlCache + '/' + fileName + " && sudo chmod 666 -R " + d_downlCache
 RmCache = ""
 MoveFake= ""
+#
+#
+#
+#
+#
+#
+#
+#
 
+
+#############   MAIN FUNCTIONS   #############
 def readFile(file):
 
     with open(file, 'r', encoding='ascii', errors='ignore') as f:
