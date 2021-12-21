@@ -1,4 +1,4 @@
-import re, os, csv, requests#, getpass
+import re, os, csv, requests
 #
 #
 #
@@ -7,7 +7,7 @@ import re, os, csv, requests#, getpass
 #
 #
 #
-usr = '/home/be' #+ getpass.getuser()
+usr = '/home/be'
 ######## CHECK THESE ARE CORRECT ########
 #Directorys
 d_fcache = usr + '/Desktop/LinuxDiscordUncacher/fakeCache'
