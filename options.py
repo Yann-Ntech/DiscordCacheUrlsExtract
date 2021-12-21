@@ -44,9 +44,9 @@ def userInput_regex():
     return regex_options[Input_re]
 
 def allregex_descriptions():
-    print("____________")
+    print("_________")
     os.system('printf "\e[6;33mMAIN MENU\e[0m\n"')
-    print("============\n")
+    print("=========\n")
     for k in regex_options:
         print(regex_options[k].description)
 
@@ -65,13 +65,15 @@ def help_1 ():
     allregex_descriptions()
     return getRegex()
 
-newOption("0","0 : Attachments", lambda : "https://media.discordapp.net/attachments/*.*(png|jpg)")
-newOption("1","1 : General", lambda : "https://*.*(png|jpg|mp4|mov)")
-newOption("2","2 : Emojis", lambda : "https://cdn.discordapp.com/emojis/*.*(png|jpg)")
-newOption("3","3 : Stickers", lambda : "https://media.discordapp.net/stickers/*.*(png|jpg) ")
-newOption("4","4 : External Attachments", lambda : "https://images-ext*.*(png|jpg|mp4|mov)")
-newOption("5","5 : ALL (beta)", lambda : "https://*.*")
-newOption("6","6 : Fun! (beta)", lambda : "kewlkidsregex")
+newOption("0","0 : Attachments (png/jpg)", lambda : "https://media.discordapp.net/attachments/*.*(png|jpg)")
+newOption("1","1 : Attachments (mp4/mov/gif)", lambda : "https://media.discordapp.net/attachments/*.*(png|jpg|mp4|mov|gif)")
+newOption("2","2 : All videos and images", lambda : "https://*.*(png|jpg|mp4|mov)")
+newOption("3","3 : All gifs", lambda : "https://*.*(gif)")
+newOption("4","4 : Emojis", lambda : "https://cdn.discordapp.com/emojis/*.*(png|jpg|gif)")
+newOption("5","5 : Stickers", lambda : "https://media.discordapp.net/stickers/*.*(png|jpg|gif) ")
+newOption("6","6 : External Attachments", lambda : "https://images-ext*.*(png|jpg|mp4|mov)")
+newOption("7","7 : ALL (beta)", lambda : "https://*.*")
+newOption("8","8 : Fun! (beta)", lambda : "kewlkidsregex")
 newOption("e","e : exit", lambda : exit())
 newOption("help","help : Help", lambda : help_1())
                     
@@ -80,8 +82,8 @@ def process_Regex ():
     
 #print(process_Regex())  
 regex = str(process_Regex())
-print("store: " + regex)
-print(type(regex))
+#print("store: " + regex)
+#print(type(regex))
 #
 #
 #
@@ -130,8 +132,7 @@ def allchoice_descriptions():
     os.system('printf "\e[6;33mEXTRACTION MENU\e[0m\n"')
     print("===============\n")
     for k in uncache_options:
-        print(uncache_options[k].choice_descriptions + "\n")
-    print("Type 'e' to exit. \n")
+        print(uncache_options[k].choice_descriptions)
 
 def extract_Error():
     try:
@@ -205,12 +206,11 @@ def Rm_Cache():
     print("Completed! The files are now unrecoverable (unless you see them in Discord again)")
     getChoice()
 
-
-Option_Ch("help","help : Help", lambda : help_2())
 Option_Ch("c","c : make Csv file", lambda : writeCsv())
 Option_Ch("d","d : download files from cache", lambda : writeDownl())
 Option_Ch("r","r : delete fake cache (recommended)", lambda : Rm_Cache())
 Option_Ch("e","e : exit", lambda : exit())
+Option_Ch("help","help : Help", lambda : help_2())
                     
 def process_Choice ():
     return getChoice()
