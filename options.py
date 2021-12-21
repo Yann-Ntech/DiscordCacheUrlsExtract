@@ -1,5 +1,4 @@
-import re, os, csv, requests
-import getpass
+import re, os, csv, requests#, getpass
 #
 #
 #
@@ -8,7 +7,7 @@ import getpass
 #
 #
 #
-usr = '/home/' + getpass.getuser()
+usr = '/home/be' #+ getpass.getuser()
 ######## CHECK THESE ARE CORRECT ########
 #Directorys
 d_fcache = usr + '/Desktop/LinuxDiscordUncacher/fakeCache'
@@ -27,7 +26,7 @@ regex_options = { }
 #
 #
 ##### CLEARS TERMINAL #####
-#os.system("clear")
+os.system("clear")
 
 #############   REGEX FILTERING   #############
 
@@ -66,10 +65,6 @@ def getRegex():
         allregex_descriptions()
         return getRegex()
 
-        
-def help_1 ():
-    allregex_descriptions()
-    return getRegex()
 
 newOption("0","0 : Attachments (png/jpg)", lambda : "https://media.discordapp.net/attachments/*.*(png|jpg)")
 newOption("1","1 : Attachments (mp4/mov/gif)", lambda : "https://media.discordapp.net/attachments/*.*(png|jpg|mp4|mov|gif)")
@@ -81,16 +76,12 @@ newOption("6","6 : External Attachments", lambda : "https://images-ext*.*(png|jp
 newOption("7","7 : ALL (beta)", lambda : "https://*.*")
 newOption("8","8 : Fun! (beta)", lambda : "kewlkidsregex")
 newOption("e","e : exit", lambda : exit())
-#newOption("help","help : Help", lambda : help_1())
                     
 def process_Regex ():
     return getRegex()
     
-#print(process_Regex())  
 regex = str(process_Regex())
-#print("store: " + regex)
-#print(type(regex))
-#
+
 ##### CLEARS TERMINAL #####
 os.system("clear")
 #
@@ -150,7 +141,6 @@ def extract_Error():
         print('\n')
         os.system('printf "\e[6;33m invalid input \e[0m"')
         print('\n')
-        #allchoice_descriptions()
         ##### CLEARS TERMINAL #####
         os.system("sleep 2 && clear")
         return getChoice()
@@ -182,9 +172,6 @@ def getChoice():
     allchoice_descriptions()
     extract_Error()
         
-def help_2 ():
-    allchoice_descriptions()
-    return getChoice()
 
 def writeCsv():
     #populate url array and fake cache
@@ -220,7 +207,7 @@ Option_Ch("c","c : make Csv file", lambda : writeCsv())
 Option_Ch("d","d : download files from cache", lambda : writeDownl())
 Option_Ch("r","r : delete fake cache (recommended)", lambda : Rm_Cache())
 Option_Ch("e","e : exit", lambda : exit())
-#Option_Ch("help","help : Help", lambda : help_2())
+
                     
 def process_Choice ():
     return getChoice()
