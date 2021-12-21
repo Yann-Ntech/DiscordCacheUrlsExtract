@@ -9,12 +9,12 @@ import getpass
 #
 #
 usr = '/home/' + getpass.getuser()
-
+######## CHECK THESE ARE CORRECT ########
 #Directorys
-d_fcache = usr + '/Desktop/DiscordUncacher/fakeCache'
+d_fcache = usr + '/Desktop/LinuxDiscordUncacher/fakeCache'
 d_cache = usr + '/.config/discord/Cache' #discord cache
-d_downlCache = usr + '/Desktop/DiscordUncacher/downlCache'
-d_UrlsExtract = usr + '/Desktop/DiscordUncacher'
+d_downlCache = usr + '/Desktop/LinuxDiscordUncacher/downlCache'
+d_UrlsExtract = usr + '/Desktop/LinuxDiscordUncacher'
 
 urlsList = []
 regex_options = { }
