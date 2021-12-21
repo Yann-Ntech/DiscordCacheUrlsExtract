@@ -16,7 +16,7 @@ You will see the directory structure in bashOS.py. Check that the directories co
 
 ```git clone https://github.com/beans816/LinuxDiscordUncacher```
 
-```sudo python3 extract.py```
+```sudo python3 options.py```
 
 
 
