@@ -1,4 +1,5 @@
 # Discord Uncacher Linux
+![image](https://user-images.githubusercontent.com/22084147/146856149-b32d68b7-4b69-4f77-b21c-30a2e43ff543.png)
 
 Added on to original and added some personal functions
 
