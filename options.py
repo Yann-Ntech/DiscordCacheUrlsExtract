@@ -7,14 +7,13 @@ import re, os, csv, requests
 #
 #
 #
-usr = '/home/be'
-######## CHECK THESE ARE CORRECT ########
-#Directorys
+#################################################### CHECK THESE ARE CORRECT ####################################################
+usr = '/home/YOUR_USERNAME_HERE' #enter in your computers username
 d_fcache = usr + '/Desktop/LinuxDiscordUncacher/fakeCache'
 d_cache = usr + '/.config/discord/Cache' #discord cache
 d_downlCache = usr + '/Desktop/LinuxDiscordUncacher/downlCache'
 d_UrlsExtract = usr + '/Desktop/LinuxDiscordUncacher'
-
+##################################################################################################################################
 urlsList = []
 regex_options = { }
 #
