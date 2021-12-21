@@ -95,13 +95,8 @@ print(type(regex))
 
 # moves files from real dicord cache into fake cache to avoid 'cant read IsaDirectoryError'
 Cache = "sudo find " + d_cache + " -type f -exec mv -t " + d_fcache + "/ {} \; && sudo chmod 777 -R " + d_fcache
-#Why: files naturally download where the script is
-#Chmod: recursively gives entire file and its contents read, write and execute permisions for current user
-#Move = "mv "+ d_UrlsExtract + '/' + fileName + " " + d_downlCache + '/' + fileName + " && sudo chmod 666 -R " + d_downlCache
 # removes fake cache
 RmCache = "sudo find " + d_fcache + " -exec shred {} -uvz \;"
-# moves fake cache back to real cache 
-#MoveFake= "mv "+ d_fcache + '/' + fileName + " " + d_cache + '/' + fileName + " && sudo chmod 666 -R " + d_cache
 #
 #
 #
@@ -202,12 +197,7 @@ def writeDownl():
             with open(fileName, 'wb') as f: #saves file
                 newfile = f.write(r.content) #writes url into a new file
                 res = os.system("sudo mv "+ d_UrlsExtract + '/' + fileName + " " + d_downlCache + '/' + fileName + " && sudo chmod 777 -R " + d_downlCache)
-                #return fileName
     getChoice()
-
-#def Move_Fake():
-    #os.system("mv "+ d_fcache + '/' + fileName + " " + d_cache + '/' + fileName + " && sudo chmod 666 -R " + d_cache)
-    #getChoice()
 
 def Rm_Cache():
     print("Deleting, please have patience ... ")
@@ -219,7 +209,6 @@ def Rm_Cache():
 Option_Ch("help","help : Help", lambda : help_2())
 Option_Ch("c","c : make Csv file", lambda : writeCsv())
 Option_Ch("d","d : download files from cache", lambda : writeDownl())
-#Option_Ch("m","m : restore cache", lambda : Move_Fake())
 Option_Ch("r","r : delete fake cache (recommended)", lambda : Rm_Cache())
 Option_Ch("e","e : exit", lambda : exit())
                     
