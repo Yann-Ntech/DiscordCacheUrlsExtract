@@ -26,6 +26,8 @@ regex_options = { }
 #
 #
 #
+##### CLEARS TERMINAL #####
+#os.system("clear")
 
 #############   REGEX FILTERING   #############
 
@@ -56,7 +58,11 @@ def getRegex():
         Input_re = userInput_regex()
         return Input_re.fun()
     except KeyError:
-        print("\e[6;33m Please input y/n \e[0m")
+        print('\n')
+        os.system('printf "\e[6;33m invalid input \e[0m"')
+        print('\n')        
+        ##### CLEARS TERMINAL #####
+        os.system("sleep 2 && clear")
         allregex_descriptions()
         return getRegex()
 
@@ -75,7 +81,7 @@ newOption("6","6 : External Attachments", lambda : "https://images-ext*.*(png|jp
 newOption("7","7 : ALL (beta)", lambda : "https://*.*")
 newOption("8","8 : Fun! (beta)", lambda : "kewlkidsregex")
 newOption("e","e : exit", lambda : exit())
-newOption("help","help : Help", lambda : help_1())
+#newOption("help","help : Help", lambda : help_1())
                     
 def process_Regex ():
     return getRegex()
@@ -85,6 +91,8 @@ regex = str(process_Regex())
 #print("store: " + regex)
 #print(type(regex))
 #
+##### CLEARS TERMINAL #####
+os.system("clear")
 #
 #
 #
@@ -143,6 +151,8 @@ def extract_Error():
         os.system('printf "\e[6;33m invalid input \e[0m"')
         print('\n')
         #allchoice_descriptions()
+        ##### CLEARS TERMINAL #####
+        os.system("sleep 2 && clear")
         return getChoice()
 
 def readFile(file):
@@ -210,7 +220,7 @@ Option_Ch("c","c : make Csv file", lambda : writeCsv())
 Option_Ch("d","d : download files from cache", lambda : writeDownl())
 Option_Ch("r","r : delete fake cache (recommended)", lambda : Rm_Cache())
 Option_Ch("e","e : exit", lambda : exit())
-Option_Ch("help","help : Help", lambda : help_2())
+#Option_Ch("help","help : Help", lambda : help_2())
                     
 def process_Choice ():
     return getChoice()
