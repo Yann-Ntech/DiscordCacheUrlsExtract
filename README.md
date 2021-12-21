@@ -16,6 +16,8 @@ Check that the directories comply with your file system so you dont get the 'dir
 
 ```git clone https://github.com/beans816/LinuxDiscordUncacher```
 
+```cd LinuxDiscordUncacher```
+
 ```sudo python3 options.py```
 
 
